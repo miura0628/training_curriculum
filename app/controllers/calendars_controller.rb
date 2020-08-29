@@ -42,6 +42,7 @@ class CalendarsController < ApplicationController
       if wday_num >= 7 #条件式を記述
         wday_num = wday_num - 7 
       end
+
       days = { month: (@todays_date + x).month, date: (@todays_date + x).day, week_day_char: wdays[(@todays_date + x).wday], plans: today_plans}
       @week_days.push(days)
     end
